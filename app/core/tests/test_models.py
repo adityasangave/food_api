@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 from core import models
@@ -51,3 +50,11 @@ class model_test(TestCase):
         )
 
         self.assertTrue(str(tag), tag.name)
+
+    def test_ingredient_model(self):
+        ingredient = models.Ingredient .objects.create(
+            user = sample_user(),
+            name = "Hot dog"
+        )
+
+        self.assertEqual(str(ingredient), ingredient.name)
