@@ -1,5 +1,3 @@
-from pyexpat import model
-from random import sample
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
